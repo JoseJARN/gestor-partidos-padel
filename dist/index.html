@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gestor de Partidos de Pádel</title>
-    <script type="module" crossorigin src="/gestor-partidos-padel/assets/index-fe4fa5c5.js"></script>
-    <link rel="stylesheet" href="/gestor-partidos-padel/assets/index-863a3ae1.css">
-  </head>
-  <body>
-    <div id="root"></div>
-    
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🎾 Gestor de Partidos de Pádel</title>
+  <meta name="description"
+    content="Registra tus partidos de pádel y obtén estadísticas sobre tu nivel de juego y dinero invertido a lo largo del tiempo." />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAENklEQVRoQ9WYXUhUQRTHz+xWohGZmklkZVA9BD70AUUJbvpUBBGFGQT6sAoV1KNBBUFQPQVCD4ZIX2AS9CL0UqsLhUUGEj5V+FERga6rkiwY6nRmd2ed3b13Pu7eFe/Avuw9c+f/O+fMOTOXwAqN82E6QCkckSw33BMg1aZyiOkEE/uGMO0CCs0mc+K2BAZ6aslRnXl5ATjXT8/6AF7qCJDZoLjnLwLkosIm12XS5zf0Y6K4PDC1bB3tagTyIZ77wg7CNYB8imcQsWmgvWcIZmb6cAXAVHzkG0DZHv08i0URIJKwD7Wmp1POAMbiv6OK5C7RgYhNoXj8iUOEyAngQpgGFin06fsSgHlfHDII0fNpk3zQGQqSYKLi5jBMvc+X4hBW4iMYobVF+CtcThsriTwKjgEaQ7R5yQddOvxMVNlutSUHG50GmPsHUL1FModAONRCAo4BdL0vpowq55nt+AzACAKwUVclh2ZRyCvA1Aju10WznO8d1BPPK5IjAPT+NXzBA3VSAERHAZYWEpaWOZ8sqVbVRvV+LGbjTgGMjgsMomRXthyeXmOYNlXFKrnWz10HkFWYTAnMlolnm1Yn560QXAVg1YY3KbuUEUWwtOn9bC++bwzguGIjuwrApKiqziLuB/8arPHC8cDKsyEUz4esGrkOwCHsmhSLUEEJwDwCyIYIwETaRSIvAFbCeGRYjWe1/th2BPGrIfyosHanvd2KATAJg5/kG5Z5XdW8MlEcAZzopnRDhVnZ4zlvJ5JtWF6bdSFQ/LAjgLoOSlXHAnFDF5VmH4lF/A+/8Hmy2bH//Xhtqd2hdpCjo0R9B21BT3WoAMQmxeq8yqvvf+LGxmOHbMNmIjkCYN6Pe6kAYJPESwvzAENfzJrUux8ANRqeT4I8QYAm4xTiAKpGxZrU5B+Aj7+tvc9zXhUZu0RyfB8QAUoqodxXCBOZi5g0KTbXFAJTINjXSjrZ3FwiEEUvlGbeC1TiOSxvVCY5n5orXOyNAOoe0UtY6x6yF4kXaw5heiQOY87rVBsxwjl9lRDTJ/NFp17RpdikeUTVxXLZInNN4xSSAcRzOVmhTETp2lqJdx0gXxB24nMBGMKX7rfzXk073byuILs66Xqb2+FXj5P9QfJaNk97E+9tuk0BP01uO3wj6/Ne2gJtFHsqVLL/NmKzO7jVVDYAniSuvGkl8WKhGloAcfGpQeDr41uJeW0Uz5dwSLUIe16xHmBfudTyKka1Xeddoo0SIF08dtfZCYj+nUXXPtNbi8B1uEvu6RmbW0kBrMUnr1IE74UHnqavSOEO3Cc3zWU4n2ELIBXP13vbrYygc2l6My0FeEU8Q8wC8JL4LACviU8D8KL4FIBXxccBvCw+KwKJJpXxyWwVlEpZQU1VoeLTlyMzc1H8ACKMVS4+u4zWNy6feTwg3rIPAIPwiHgG8B83rNqd0GcIMQAAAABJRU5ErkJggg==" sizes="48x48" />
+  <link rel="icon" type="image/svg+xml" href="/gestor-partidos-padel/assets/favicon-fe516c2d.svg" />
+  <link rel="shortcut icon" href="/gestor-partidos-padel/assets/favicon-16fa2430.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/gestor-partidos-padel/assets/apple-touch-icon-dd8f0617.png" />
+  <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+  <link rel="manifest" href="data:application/manifest+json;base64,ewogICJuYW1lIjogIk15V2ViU2l0ZSIsCiAgInNob3J0X25hbWUiOiAiTXlTaXRlIiwKICAiaWNvbnMiOiBbCiAgICB7CiAgICAgICJzcmMiOiAiL2Rpc3QvYXNzZXRzL2Zhdmljb24vd2ViLWFwcC1tYW5pZmVzdC0xOTJ4MTkyLnBuZyIsCiAgICAgICJzaXplcyI6ICIxOTJ4MTkyIiwKICAgICAgInR5cGUiOiAiaW1hZ2UvcG5nIiwKICAgICAgInB1cnBvc2UiOiAibWFza2FibGUiCiAgICB9LAogICAgewogICAgICAic3JjIjogIi9kaXN0L2Fzc2V0cy9mYXZpY29uL3dlYi1hcHAtbWFuaWZlc3QtNTEyeDUxMi5wbmciLAogICAgICAic2l6ZXMiOiAiNTEyeDUxMiIsCiAgICAgICJ0eXBlIjogImltYWdlL3BuZyIsCiAgICAgICJwdXJwb3NlIjogIm1hc2thYmxlIgogICAgfQogIF0sCiAgInRoZW1lX2NvbG9yIjogIiNmZmZmZmYiLAogICJiYWNrZ3JvdW5kX2NvbG9yIjogIiNmZmZmZmYiLAogICJkaXNwbGF5IjogInN0YW5kYWxvbmUiCn0=" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="🎾 Gestor de Partidos de Pádel">
+  <meta property="og:site_name" content="Partidos Pádel">
+  <meta property="og:url" content=partidospadel.trastero.ovh>
+  <meta property="og:description"
+    content="Registra tus partidos de pádel y obtén estadísticas sobre tu nivel de juego y dinero invertido a lo largo del tiempo.">
+  <meta property=" og:type" content="">
+  <meta property="og:image" content=/dist/assets/images/image-share-partidospadel.jpg>
+  <script type="module" crossorigin src="/gestor-partidos-padel/assets/index-fe4fa5c5.js"></script>
+  <link rel="stylesheet" href="/gestor-partidos-padel/assets/index-863a3ae1.css">
+</head>
+
+<body>
+  <div id="root"></div>
+  
+</body>
+
 </html>
